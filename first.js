@@ -19,8 +19,8 @@ function bindData(articles) {
    let newsTemplate = document.getElementById('template-news');
 
    newsContainer.innerHTML = "";
-
-   articles.forEach(article => {
+   let container = articles;
+   container.forEach(article => {
       if(!article.urlToImage) return;
       let newsClone = newsTemplate.content.cloneNode(true);
       fillDataInNews(newsClone , article);
